@@ -36,8 +36,5 @@ export class ConsultaBancoPage {
   }
   executeQuery() {
     this.bdDao.execute(this.form.query);
-
-
-
   }
 }
