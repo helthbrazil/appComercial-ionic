@@ -1,0 +1,18 @@
+<ion-header>
+  <header [title]=nomeFazenda></header>
+  <title-page [titulo]=titulo [icone]=icone [cor]=corCabecalho [showIcon]=showIcon></title-page>
+</ion-header>
+
+<ion-content class="master">
+  <gta-card [tipoGTAICone]="entrada" [fazendaOrigem]="fazendaOrigem" [fazendaDestino]="fazendaDestino"></gta-card>
+  <gta-card [tipoGTAICone]="saida" [fazendaOrigem]="fazendaOrigem" [fazendaDestino]="fazendaDestino"></gta-card>
+  <gta-card [tipoGTAICone]="saida" [fazendaOrigem]="fazendaOrigem" [fazendaDestino]="fazendaDestino"></gta-card>
+  <gta-card [tipoGTAICone]="entrada" [fazendaOrigem]="fazendaOrigem" [fazendaDestino]="fazendaDestino"></gta-card>
+  <gta-card [tipoGTAICone]="entrada" [fazendaOrigem]="fazendaOrigem" [fazendaDestino]="fazendaDestino"></gta-card>
+  <gta-card [tipoGTAICone]="entrada" [fazendaOrigem]="fazendaOrigem" [fazendaDestino]="fazendaDestino"></gta-card>
+
+  <ion-fab (tap)="navigateToAddGTA()" right bottom>
+    <button class="fab" color="intergado" ion-fab><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

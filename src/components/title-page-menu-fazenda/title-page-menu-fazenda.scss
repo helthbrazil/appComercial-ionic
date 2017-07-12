@@ -1,0 +1,20 @@
+title-page-menu-fazenda {
+  .menu {
+    background-color: gray;
+    width: 100% !important;
+    height: 20px !important;
+    position: absolute;
+    vertical-align: center;
+    text-align: center;
+    top: 0px;
+  }
+  .titulo {
+    font-size: 10px !important;
+    text-align: center !important;
+  }
+  .fixed {
+    position: fixed;
+    left: 0px;
+    top: 55px;
+  }
+}

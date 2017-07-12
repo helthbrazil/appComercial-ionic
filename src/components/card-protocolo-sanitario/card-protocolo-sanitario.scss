@@ -1,0 +1,36 @@
+card-protocolo-sanitario {
+  .editar {
+    margin-right: 0px;
+  }
+  span {
+    color: rgb(16, 89, 130);
+  }
+  .content {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -10px !important;
+  }
+  .tipoGta {
+    position: absolute;
+    right: -25px;
+  }
+  .fazenda {
+    padding-left: 25px;
+    margin-top: 5px;
+  }
+
+  .buttonExecute {
+
+      position: absolute;
+      right: 0%;
+      bottom: -5px;
+  }
+
+  div {
+      color:#00b386;
+  }
+
+  .edit{
+      margin-top: 5px;
+  }
+}

@@ -1,0 +1,29 @@
+<ion-header class="fixed">
+  <ion-navbar class="menu" color="lightMenu">
+    <ion-title class="titulo">{{title}}</ion-title>
+
+    <ion-buttons *ngIf="optionShow" end>
+      <button (tap)="presentActionSheet()" ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-header color="intergado">
+  <ion-buttons end>
+    <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+  </ion-buttons>
+  <ion-title>{{title}}</ion-title>
+</ion-header>
+-->
+
+
+<!--<div class="menu">
+
+
+
+</div>
+<ion-->

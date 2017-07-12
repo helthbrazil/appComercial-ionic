@@ -1,0 +1,38 @@
+item-animal {
+  ion-card {
+   
+  }
+  .divisor {
+    margin-top: 10px;
+    opacity: 0.6;
+    background-color: gray;
+    width: 90%;
+    margin-left: 10%;
+    border-radius: 1px;
+    margin-bottom: 0px;
+    height: 2px;
+    box-shadow: 0px 2px 6px 0px gray;
+  }
+  .manejo {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .tag {
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 24px;
+  }
+  .sisbov {
+    position: absolute;
+    margin-left: 46px;
+    margin-top: 60px;
+  }
+  .item {
+    height: 75px;
+  }
+  h4 {
+    color: #e68a00;
+    opacity: 0.7;
+  }
+}

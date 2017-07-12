@@ -1,0 +1,46 @@
+page-animais {
+  .master {
+    background-color: #f2f2f2;
+  }
+  ion-toolbar {
+    opacity: 0.8
+  }
+  .items {
+    margin-bottom: 20px!important;
+    height: 60px;
+    /*   border: 2px black outset !important;*/
+    top: 0px;
+  }
+  .line-divisor {
+    top: 50px;
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    opacity: 0.2;
+    width: 95%;
+    background-color: gray;
+    margin-left: 5%;
+   /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
+  }
+  h1 {
+    color: orange;
+    opacity: 0.8;
+  }
+  .manejo {
+    position: absolute;
+    margin-left: 50px;
+    top: 0px;
+  }
+  .tag {
+    position: absolute;
+    top: 20px;
+    margin-left: 50px;
+  }
+  .img-cow {
+    position: absolute;
+    top: 5px;
+  }
+  ion-item {
+    margin: 0px;
+  }
+}

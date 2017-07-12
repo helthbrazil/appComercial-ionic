@@ -1,19 +1,26 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" id="menu" side="left">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
+    <ion-toolbar class="menuHeader" color="intergado">
+      <button id="botaoMenu" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <img class="logoMenu" width="160" padding src="assets/svg/intergado_white.svg" alt="logo">
+      <div class="infoUser">
+        <p class="nomeLabel">Hebert Ferreira</p>
+        <ion-note class="cargoLabel">Técnico</ion-note>
+      </div>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+  <ion-content class="menu">
+    <div class="padding-min"></div>
+    <ion-list no-lines>
+      <item-menu *ngFor="let p of pages; let i = index" [titulo]=p.title [icone]=p.icone (tap)="openPage(p)"></item-menu>
     </ion-list>
+    <div class="line-menu"></div>
+    <item-menu [titulo]=about.title [icone]=about.icone (tap)="openPage(about)"></item-menu>
+    <item-menu [titulo]=consulta.title [icone]=consulta.icone (tap)="openPage(consulta)"></item-menu>
   </ion-content>
-
 </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav backButtonText="Voltar" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

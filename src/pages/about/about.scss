@@ -1,0 +1,15 @@
+page-about {
+  $corIntergado: rgb(16, 89, 119);
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $corIntergado;
+  }
+  h2 {
+    color: $corIntergado;
+  }
+}

@@ -1,0 +1,22 @@
+gta-card {
+  .editar {
+    position: absolute;
+    right: 5%;
+  }
+  span {
+    color: rgb(16, 89, 130);
+  }
+  .content {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -10px !important;
+  }
+  .tipoGta {
+    position: absolute;
+    right: 40% !important;
+  }
+  .fazenda {
+    padding-left: 25px;
+    margin-top: 5px;
+  }
+}

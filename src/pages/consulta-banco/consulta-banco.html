@@ -1,0 +1,16 @@
+<ion-header>
+ <header [title]=titulo></header>
+</ion-header>
+
+<ion-content padding>
+  <form #formulario="ngForm" (ngSubmit)="executeQuery()">
+    <ion-item no-lines>
+      <ion-label floating>Consulta</ion-label>
+      <ion-input required [(ngModel)]="form.query" name="query" type="text"></ion-input>
+    </ion-item>
+    <!--<button color="intergado" [disabled]="!formulario.valid" class="botao" type="submit" ion-button block>Buscar</button>-->
+    <botao [color]=buttonColor [label]=labelButton type="submit"></botao>
+  </form>
+
+
+</ion-content>

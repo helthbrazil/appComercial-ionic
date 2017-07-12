@@ -1,0 +1,45 @@
+page-login {
+  .loginBackground {
+    background-color: white;
+  }
+  .center {
+    text-align: center;
+  }
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
+  .content {
+    margin-top: 30px;
+  }
+  .linha-top {
+    height: 10px;
+    padding: 2px;
+  }
+  .linha-down {
+    height: 30px;
+    padding: 2px;
+  }
+  .grad {
+    background: #0e4d71;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #105982, white);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #105982, white);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #105982, white);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #105982, white);
+    /* Standard syntax */
+  }
+  $text-input-highlight-color-valid: yellow;
+  $fundo: #0e4d71;
+  .loginBackground {
+    background-color: $fundo
+  }
+  .botao-login {
+    margin-top: 20px;
+    z-index: 10px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,22 @@
+<ion-content>
+  <!--  <img class="linha-top" src="assets/img/linha.png">
+  <img class="linha-down" src="assets/img/linha.png">-->
+  <div padding class="content">
+    <img style="margin-top: 10px;" class="center" width="200" height="100" src="assets/svg/logoIntergado.svg" />
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-item class="item espacado">
+        <ion-label color="intergado" floating>Usuário</ion-label>
+        <ion-input color="intergado" type="text" color="white" required [(ngModel)]="formulario.username" name="username"></ion-input>
+      </ion-item>
+      <ion-item class="espacado">
+        <ion-label color="intergado" floating>Senha</ion-label>
+        <ion-input color="intergado" type="password" color="white" required [(ngModel)]="formulario.password" name="password"></ion-input>
+      </ion-item>
+      <!--     <botao ion-button block [disabled]="!form.valid">Entrar</botao>-->
+      <botao [color]=corButton [disabled]="!form.valid" [label]=labelButtonEstoque type="submit"></botao>
+    </form>
+    <!--<button ion-button block (tap)="testeLogin()">teste login</button>-->
+
+    
+  </div>
+</ion-content>

@@ -1,14 +1,27 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
+  public titulo = "Home";
+  items: Array<string>;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.items = new Array<string>();
+    this.initItems();
+  }
 
-  constructor(public navCtrl: NavController) {
+  initItems() {
+    for (let i = 0; i < 10000; i++) {
+      this.items.push("" + i);
+    }
+  }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
   }
 
 }

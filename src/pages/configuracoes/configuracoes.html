@@ -1,0 +1,10 @@
+<ion-header>
+  <header [title]=nomeFazenda></header>
+  <title-page [titulo]=titulo [icone]=icone [cor]=corCabecalho [showIcon]=showIcon></title-page>
+</ion-header>
+
+
+<ion-content padding>
+  <botao [color]=corButton [label]=labelButtonEstoque (tap)="navigateToProdutosEstoque()"></botao>
+  <botao [color]=corButton [label]=labelButtonRacas (tap)="navigateToRacasFavoritas()"></botao>
+</ion-content>

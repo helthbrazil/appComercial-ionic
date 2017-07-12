@@ -1,39 +1,90 @@
+import { BDUtil } from './../persistence/bdUtil';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, NavController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild(Nav) nav: NavController;
 
-  rootPage: any = HomePage;
+  rootPage: string;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: string, icone: string }>;
+  public about: any = {
+    title: "Sobre nós",
+    component: 'AboutPage',
+    icone: 'assets/svg/about.svg'
+  }
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  public consulta: any = {
+    title: "Consultar Base de Dados",
+    component: 'ConsultaBancoPage',
+    icone: 'assets/svg/database.svg'
+  }
+
+  ionViewDidLoad(){
+    
+  }
+
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
+    public bdUtil: BDUtil, public events: Events) {
+
+    let iconeConfiguracoes = 'assets/svg/config.svg';
+    let iconePainelPrincipal = 'assets/svg/home.svg';
+    let iconeEstoque = 'assets/svg/estoque.svg';
+    let iconeRacasEmEstoque = 'assets/svg/cow.svg';
+    let iconeUsuario = 'assets/svg/user.svg';
+    let iconeRelatorio = 'assets/svg/report.svg';
+    let iconeGTA = 'assets/svg/gta.svg';
+    let iconeSelecionarFazenda = 'assets/svg/selecionarFazenda.svg';
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Painel Principal', component: 'PrincipalPage', icone: iconePainelPrincipal },
+      { title: 'Usuário', component: 'UsuarioPage', icone: iconeUsuario },
+      { title: 'Cadastrar GTA', component: 'GtaPage', icone: iconeGTA },
+      { title: 'Relatórios', component: 'RelatoriosPage', icone: iconeRelatorio },
+      { title: 'Selecionar Fazenda', component: 'FazendaPage', icone: iconeSelecionarFazenda },
+      { title: 'Configurações', component: 'ConfiguracoesPage', icone: iconeConfiguracoes }
     ];
 
+    this.events.subscribe('setRoot', (page, params) => {
+      this.setRoot(page, params);
+    });
+    this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
+      this.statusBar.backgroundColorByHexString('#0b3e5b');
       this.splashScreen.hide();
+
+      /*   // Direcionamento de página principal 
+         this.rootPage = "PrincipalPage";
+   */
+      // Direcionamento de página Login
+      //  this.rootPage = "LoginPage";
+
+/*      this.events.publish('setRoot', 'PrincipalPage', {
+        dados: 1
+      });*/
+
+      this.events.publish('setRoot', 'PrincipalPage', {
+        dados: 1
+      });
+      // inicializar base de dados
+      this.bdUtil.createTables();
+
     });
+  }
+
+  setRoot(page, params) {
+    this.nav.setRoot(page, { principal: this, params: params });
   }
 
   openPage(page) {

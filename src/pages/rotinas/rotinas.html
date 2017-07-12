@@ -1,0 +1,9 @@
+<ion-header>
+  <header [title]=titulo></header>
+</ion-header>
+
+<ion-content class="master">
+  <item-rotina (tap)="navigateToRotinaPage(2)" [icone]="iconeSanitario" [label]="labelSanitario"></item-rotina>
+  <item-rotina (tap)="navigateToRotinaPage(3)" [icone]="iconeVenda" [label]="labelVenda"></item-rotina>
+  <item-rotina (tap)="navigateToRotinaPage(1)" [icone]="iconeCadastroAnimal" [label]="labelCadastro"></item-rotina>
+</ion-content>

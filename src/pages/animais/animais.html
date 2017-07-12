@@ -1,0 +1,30 @@
+<ion-header>
+  <header [title]=titulo></header>
+</ion-header>
+
+<ion-content padding>
+  <ion-list approxItemHeight="60px" bufferRatio="4" no-lines [virtualScroll]="items">
+    <ion-item class="items" *virtualItem="let item">
+      <h1 class="manejo">RS240W</h1>
+      <h4 class="tag">{{item.label}}</h4>
+<!--      <ion-img class="img-cow" [width]="40" [height]="40" src="assets/svg/cow2.svg"></ion-img>-->
+      <img class="img-cow" width=38 src="assets/svg/cow2.svg">
+      <div class="line-divisor"></div>
+    </ion-item>
+  </ion-list>
+  <ion-fab (tap)="addAnimal()" right bottom>
+    <button class="fab" color="intergado" ion-fab><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="lightMenu">
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="md-bluetooth"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar [autocorrect]="autoCorrect" [type]="type" [showCancelButton]="cancelButtonSearch" [autocomplete]="autoCompleteSearch"
+      [placeholder]="labelSearch" (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-footer>

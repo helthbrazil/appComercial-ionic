@@ -1,0 +1,44 @@
+<ion-header>
+  <header [title]=nomeFazenda></header>
+  <title-page [titulo]=titulo [icone]=icone [showIcon]=showIcon></title-page>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="intergado" stacked>Descrição da GTA</ion-label>
+      <ion-input color="intergado" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="intergado" stacked>Número(s)</ion-label>
+      <ion-input color="intergado" type="number" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data GTA:</ion-label>
+      <ion-datetime mode="ios" placeholder="Selecione a data" cancelText="Cancelar" doneText="Selecionar" monthNames="Janeiro, Fevereiro, Março, Abril, Maio, Junho, 
+      Julho, Agosto, Setembro, Outubro, Novembro, Dezembro" monthShortNames="Jan, Fev, Mar, Abr,
+      Mai, Jun, Jul, Ago, Set, Out, Nov, Dez" displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tipo:</ion-label>
+      <ion-select cancelText="Cancelar" okText="Selecionar">
+        <ion-option value="1">Entrada</ion-option>
+        <ion-option value="0">Saída</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="intergado" stacked>Origem</ion-label>
+      <ion-input color="intergado" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="intergado" stacked>Destino</ion-label>
+      <ion-input color="intergado" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="intergado" stacked>Quantidade de Animais</ion-label>
+      <ion-input color="intergado" type="number" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+  <botao [label]="labelButton" (tap)="salvarGta()"></botao>
+</ion-content>
